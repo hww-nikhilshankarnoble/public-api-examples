@@ -1,5 +1,5 @@
 # Build Sphinx documentation to Github pages for a repo on push to main
-name: Python application
+name: Sphinx documentation
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Build Sphinx docs
       run: |
-        sphinx-build doc _build
+        sphinx-build all_dunder/source _build
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
