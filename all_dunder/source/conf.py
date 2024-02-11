@@ -7,6 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import sys
 
+sys.path.append("./all_dunder")
+
 project = "hvfx_campaign_manager"
 copyright = "2024, Nikhil Shankar-Noble"
 author = "Nikhil Shankar-Noble"
